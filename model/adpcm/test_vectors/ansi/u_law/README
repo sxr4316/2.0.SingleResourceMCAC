@@ -1,0 +1,30 @@
+
+init1.mu    -> u-law pcm initialization sequence
+init2.mu    -> adpcm initialization sequence
+------------------------------------------------------------------
+Narrow band/ Broad band signal test:
+
+(init1.mu + vector1.mu)->[encoder]->+->[decoder]->(init-header + vector3.mu)
+                                    |
+                                    +->(init-header + vector2.mu)
+
+vector1.mu  -> u-law encoder input sequence
+vector2.mu  -> corresponding adpcm encoder output sequence
+vector3.mu  -> corresponding u-law pcm decoder output sequence
+------------------------------------------------------------------
+Decoder polarity sequence test:
+
+(init2.mu + vector4.mu) ->[decoder]->(init-header + vector5.mu)
+
+vector4.mu  -> adpcm decoder input sequence
+vector5.mu  -> corresponding u-law pcm decoder output sequence
+------------------------------------------------------------------
+Overload signal test:
+
+(init1.mu + vector6.mu) ->[encoder]->+->[decoder]->(init-header + vector8.mu)
+                                     |
+                                     +->(init-header + vector7.mu)
+
+vector6.mu  -> u-law encoder input sequence
+vector7.mu  -> corresponding adpcm encoder output sequence
+vector8.mu  -> corresponding u-law pcm decoder output sequence

@@ -1,0 +1,41 @@
+
+Running "make test" will build the programs and run
+the u-law and a-law conformance tests.
+
+The codebase has limited instrumentation for debug
+at this time, however running "make debug" will build
+the programs and run the u-law and a-law conformance
+tests with debugging turned on.
+
+Useful scripts:
+
+chk ........ runs g.726 encoder and decoder ansi vector test suites
+              configuration as specified in the vector README files
+
+chk_g711 ... runs g.711 encoder and decoder test cases
+              uses either an g.711 encoder chain
+                  encoder -> decoder -> encoder
+              or g.711 decoder chain
+                  decoder -> encoder -> decoder
+              to test g.711 (currently perl or AWK or visual inspection)
+
+----
+
+r3.0  - additional mod's to processing of u-law
+         - added necessary spec requirements to process a-law pcm
+          current does not fully work
+        - created tst_g711 to qualify u-law & a-law g.711 operation
+
+r2.0  - mod's to process only ascii
+         binary files can be processed with the following
+         utilities; binary files can be produced with a
+         sun audiofile header
+        - created pcma2b (convert an ascii pcm file to binary)
+        - created pcmb2a (convert an binary pcm file to ascii)
+        - created stripInit to strip the initializion block
+          from an ascii or binary pcm file
+
+r1.0  - original work, process only binary pcm files
+         (w/o sun audiofile header)
+        - created enc to encode u-law pcm to adpcm
+        - created dec to decode adpcm to u-law pcm

@@ -1,0 +1,70 @@
+set designer {Mark A. Indovina}
+set company {Afghan Dog Software}
+
+set hdlin_enable_presto true
+
+#/* connect to all ports in the design, even if driven by the same net */
+#/* compile_fix_multiple_port_nets = true */
+set_fix_multiple_port_nets -all -buffer_constants
+
+#/* do not allow wire type tri in the netlist */
+set verilogout_no_tri true
+
+set verilogout_equation false
+
+#/* to fix those pesky escaped names */
+#/* the following variable was obsoleted in 3.1 */
+#/* read_array_naming_style = %s_%d */
+set bus_naming_style {%s[%d]}
+#/* hdlout_internal_busses = true */
+
+
+#/* to fix those pesky escaped names */
+#/* to be used with 'change_names -hierarchy' */
+#/* after a compile - should only be needed in */
+#/* extreme cases when 'bus_naming_style' isn't fully working */
+define_name_rules Verilog -allowed {a-z A-Z 0-9 _} -first_restricted {0-9 _} -replacement_char "__" -type cell
+define_name_rules Verilog -allowed {a-z A-Z 0-9 _ []} -first_restricted {0-9 _} -replacement_char "__" -type port
+define_name_rules Verilog -allowed {a-z A-Z 0-9 _} -first_restricted {0-9 _} -replacement_char "__" -type net
+set default_name_rules Verilog
+
+#/* my local aliases */
+# alias rv "read -format verilog "
+# alias report_timing "report_timing -input_pins -nets "
+
+#/* allow asynchronous set/ reset latches */
+set hdlin_latch_synch_set_reset false
+
+set design_root "./"
+set cache_read [concat  $design_root $cache_read]
+set cache_write $design_root
+set workPath [format "%s%s"  $design_root "work/"]
+set dbPath [format "%s%s"  $design_root "db/"]
+set search_path [concat  $search_path $dbPath]
+set synthetic_library [list dw_foundation.sldb standard.sldb]
+
+#/* Work Directory */
+define_design_lib work -path work_lib
+
+#/* set technology library */
+
+set search_path [list . [format "%s%s"  $synopsys_root "/libraries/syn"] "/classes/ee620/maieee/lib/tsmc-0.18/synopsys"]
+
+set library_name "typical"
+set target_library [list typical.db]
+set link_library [concat  [concat  "*" $target_library] $synthetic_library]
+set synlib_wait_for_design_license "DesignWare"
+# Turn on auto wire load selection
+# (library must support this feature)
+set auto_wire_load_selection true
+
+# If your design contains parameters, you can indicate that
+# the design should be read in as a template
+set hdlin_auto_save_templates true
+
+#
+# default scan port naming styles
+#
+set test_scan_in_port_naming_style scan_in%s%s
+set test_scan_out_port_naming_style scan_out%s%s
+

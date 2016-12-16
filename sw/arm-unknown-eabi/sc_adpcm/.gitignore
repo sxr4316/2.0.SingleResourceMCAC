@@ -1,0 +1,13 @@
+hello-world_memparams128.v
+hello-world_memparams32.v
+dec
+enc
+pcma2b
+pcmb2a
+stripInit
+genpcm
+atopcm
+pcmcmp
+tst_g711
+*.o
+output.txt

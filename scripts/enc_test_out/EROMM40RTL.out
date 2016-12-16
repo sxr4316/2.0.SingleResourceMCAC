@@ -1,0 +1,905 @@
+Running test EROMM40
+Started test at local date and time Tue Apr 26 21:13:28 2016
+This module is assigned to Siddharth. An email will be sent to him/her at: sxr4316@rit.edu
+
+Current tester: Siddharth (username: sxr4316)
+
+-----------------------------------------------------------------------------
+Current git version: 2d4010543ae1b09e95e64daeb4ad558e8b862158
+ 
+Starting RTL simulation.
+
+
+RTL simulation script has completed.
+
+
+-----------------------------------------------------------------------------
+
+RTL simulation passed.
+
+
+Ended test at local date and time Tue Apr 26 21:51:06 2016
+
+-----------------------------------------------------------------------------
+
+
+Reading tests that have been done from database:
+Connor did test ERNMM32 starting at Tue Apr 26 15:50:57 2016 and it failed.
+Adam did test EHOMM40 starting at Tue Apr 26 14:40:18 2016 and it passed.
+Adam did test EHOMM32 starting at Tue Apr 26 14:40:12 2016 and it passed.
+Jason did test EROAA24 starting at Tue Apr 26 16:20:01 2016 and it passed.
+Adam did test ERNAA16 starting at Tue Apr 26 14:39:44 2016 and it failed.
+Adam did test ERNAA32 starting at Tue Apr 26 14:39:59 2016 and it passed.
+Adam did test ERNAA24 starting at Tue Apr 26 14:39:52 2016 and it passed.
+Swathika did test EHNAA32 starting at Tue Apr 26 21:15:48 2016 and it failed.
+Swathika did test EHNAA32 starting at Tue Apr 26 21:23:03 2016 and it failed.
+Swathika did test EHNMM16 starting at Tue Apr 26 21:26:33 2016 and it failed.
+Swathika did test EHNAA16 starting at Tue Apr 26 21:27:22 2016 and it failed.
+Swathika did test EROMM40 starting at Tue Apr 26 21:27:52 2016 and it failed.
+Anurag did test EROMM16 starting at Tue Apr 26 21:39:16 2016 and it failed.
+Swathika did test EHNAA32 starting at Tue Apr 26 21:39:57 2016 and it failed.
+Siddharth did test EROMM40 starting at Tue Apr 26 21:13:28 2016 and it passed.
+
+-----------------------------------------------------------------------------
+RTL SIMULATION LOG CONTENTS:
+
+ncverilog(64): 14.10-s032: (c) Copyright 1995-2015 Cadence Design Systems, Inc.
+
+TOOL:	ncverilog	14.10-s032: Started on Apr 26, 2016 at 21:13:31 EDT
+
+ncverilog
+
+	+ncaccess+r
+
+	+ncvpicompat+1364v1995
+
+	+nowarnTFNPC
+
+	+nowarnIWFA
+
+	+nowarnSVTL
+
+	+nowarnSDFNCAP
+
+	-run
+
+	+ncrun
+
+	-f etc/enc.vec.rtl.f
+
+		+nowarnTFNPC
+
+		+nowarnIWFA
+
+		+nowarnSVTL
+
+		src/timescale.v
+
+		src/enc_vec_test.v
+
+		src/tb_uart.v
+
+		src/dumpvcd.v
+
+		src/main_mem.v
+
+		src/enc.v
+
+		-y
+
+		../a25_core/src/
+
+		../generic_sram_byte_en/src/generic_sram_byte_en.v
+
+		../generic_sram_line_en/src/generic_sram_line_en.v
+
+		../wishbone_arbiter/src/wishbone_arbiter.v
+
+		../boot_mem128/src/boot_mem128.v
+
+		../APRSC/src/APRSC.v
+
+		../uart/src/uart.v
+
+		../TDMI/src/TDMI.v
+
+		../test_module/src/test_module.v
+
+		../timer_module/src/timer_module.v
+
+		../interrupt_controller/src/interrupt_controller.v
+
+		../TDMO/src/TDMO.v
+
+		../CFG_INT/src/CFG_INT.v
+
+		../CLK_GEN/src/CLK_GEN.v
+
+		../ADDB/src/ADDB.v
+
+		../ADDC/src/ADDC.v
+
+		../DELAY/src/DELAY.v
+
+		../FMULT_ACCUM/src/FMULT_ACCUM.v
+
+		../FLOATA/src/FLOATA.v
+
+		../FLOATB/src/FLOATB.v
+
+		../LIMC/src/LIMC.v
+
+		../LIMD/src/LIMD.v
+
+		../TRIGB/src/TRIGB.v
+
+		../UPA1/src/UPA1.v
+
+		../UPA2/src/UPA2.v
+
+		../UPB/src/UPB.v
+
+		../XOR/src/XOR.v
+
+		../FMULT/src/FMULT.v
+
+		../ACCUM/src/ACCUM.v
+
+		-v
+
+		/classes/ee620/maieee/lib/synopsys/SAED_EDK32-28nm/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v
+
+		+libext+.v
+
+		+librescan
+
+	-input
+
+	etc/dumpsaif.tcl
+
+file: src/timescale.v
+
+file: src/enc_vec_test.v
+
+	module worklib.test:v
+
+		errors: 0, warnings: 0
+
+file: src/tb_uart.v
+
+	module worklib.tb_uart:v
+
+		errors: 0, warnings: 0
+
+file: src/dumpvcd.v
+
+	module worklib.dumpvcd:v
+
+		errors: 0, warnings: 0
+
+file: src/main_mem.v
+
+	module worklib.main_mem:v
+
+		errors: 0, warnings: 0
+
+file: src/enc.v
+
+	module worklib.enc:v
+
+		errors: 0, warnings: 0
+
+file: ../generic_sram_byte_en/src/generic_sram_byte_en.v
+
+	module worklib.generic_sram_byte_en:v
+
+		errors: 0, warnings: 0
+
+file: ../generic_sram_line_en/src/generic_sram_line_en.v
+
+	module worklib.generic_sram_line_en:v
+
+		errors: 0, warnings: 0
+
+file: ../wishbone_arbiter/src/wishbone_arbiter.v
+
+	module worklib.wishbone_arbiter:v
+
+		errors: 0, warnings: 0
+
+file: ../boot_mem128/src/boot_mem128.v
+
+	module worklib.boot_mem128:v
+
+		errors: 0, warnings: 0
+
+file: ../APRSC/src/APRSC.v
+
+	module worklib.APRSC:v
+
+		errors: 0, warnings: 0
+
+file: ../uart/src/uart.v
+
+	module worklib.uart:v
+
+		errors: 0, warnings: 0
+
+file: ../TDMI/src/TDMI.v
+
+	module worklib.TDMI:v
+
+		errors: 0, warnings: 0
+
+file: ../test_module/src/test_module.v
+
+	module worklib.test_module:v
+
+		errors: 0, warnings: 0
+
+file: ../timer_module/src/timer_module.v
+
+	module worklib.timer_module:v
+
+		errors: 0, warnings: 0
+
+file: ../interrupt_controller/src/interrupt_controller.v
+
+	module worklib.interrupt_controller:v
+
+		errors: 0, warnings: 0
+
+file: ../TDMO/src/TDMO.v
+
+	module worklib.TDMO:v
+
+		errors: 0, warnings: 0
+
+file: ../CFG_INT/src/CFG_INT.v
+
+	module worklib.CFG_INT:v
+
+		errors: 0, warnings: 0
+
+file: ../CLK_GEN/src/CLK_GEN.v
+
+	module worklib.CLK_GEN:v
+
+		errors: 0, warnings: 0
+
+file: ../ADDB/src/ADDB.v
+
+	module worklib.ADDB:v
+
+		errors: 0, warnings: 0
+
+file: ../ADDC/src/ADDC.v
+
+	module worklib.ADDC:v
+
+		errors: 0, warnings: 0
+
+file: ../DELAY/src/DELAY.v
+
+	module worklib.DELAY:v
+
+		errors: 0, warnings: 0
+
+file: ../FMULT_ACCUM/src/FMULT_ACCUM.v
+
+	module worklib.FMULT_ACCUM:v
+
+		errors: 0, warnings: 0
+
+file: ../FLOATA/src/FLOATA.v
+
+	module worklib.FLOATA:v
+
+		errors: 0, warnings: 0
+
+file: ../FLOATB/src/FLOATB.v
+
+	module worklib.FLOATB:v
+
+		errors: 0, warnings: 0
+
+file: ../LIMC/src/LIMC.v
+
+	module worklib.LIMC:v
+
+		errors: 0, warnings: 0
+
+file: ../LIMD/src/LIMD.v
+
+	module worklib.LIMD:v
+
+		errors: 0, warnings: 0
+
+file: ../TRIGB/src/TRIGB.v
+
+	module worklib.TRIGB:v
+
+		errors: 0, warnings: 0
+
+file: ../UPA1/src/UPA1.v
+
+	module worklib.UPA1:v
+
+		errors: 0, warnings: 0
+
+file: ../UPA2/src/UPA2.v
+
+	module worklib.UPA2:v
+
+		errors: 0, warnings: 0
+
+file: ../UPB/src/UPB.v
+
+	module worklib.UPB:v
+
+		errors: 0, warnings: 0
+
+file: ../XOR/src/XOR.v
+
+	module worklib.XOR:v
+
+		errors: 0, warnings: 0
+
+file: ../FMULT/src/FMULT.v
+
+	module worklib.FMULT:v
+
+		errors: 0, warnings: 0
+
+file: ../ACCUM/src/ACCUM.v
+
+	module worklib.ACCUM:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_core.v
+
+	module src.a25_core:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_fetch.v
+
+	module src.a25_fetch:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_decode.v
+
+	module src.a25_decode:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_execute.v
+
+	module src.a25_execute:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_mem.v
+
+	module src.a25_mem:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_write_back.v
+
+	module src.a25_write_back:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_wishbone.v
+
+	module src.a25_wishbone:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_coprocessor.v
+
+	module src.a25_coprocessor:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_icache.v
+
+	module src.a25_icache:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_decompile.v
+
+	module src.a25_decompile:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_barrel_shift.v
+
+	module src.a25_barrel_shift:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_alu.v
+
+	module src.a25_alu:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_multiply.v
+
+	module src.a25_multiply:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_register_bank.v
+
+	module src.a25_register_bank:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_dcache.v
+
+	module src.a25_dcache:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_wishbone_buf.v
+
+	module src.a25_wishbone_buf:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_shifter.v
+
+	module src.a25_shifter:v
+
+		errors: 0, warnings: 0
+
+file: /classes/ee620/maieee/lib/synopsys/SAED_EDK32-28nm/SAED32_EDK/lib/stdcell_rvt/verilog/saed32nm.v
+
+	module saed32nm.CLKBUFX4:v
+
+		errors: 0, warnings: 0
+
+	module saed32nm.CLKINVX4:v
+
+		errors: 0, warnings: 0
+
+		Caching library 'saed32nm' ....... Done
+
+		Caching library 'worklib' ....... Done
+
+		Caching library 'src' ....... Done
+
+	Elaborating the design hierarchy:
+
+	u_mem (
+
+	    |
+
+ncelab: *W,CUVWSI (../boot_mem128/src/boot_mem128.v,174|5): 5 input ports were not connected:
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,61): scan_in0
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,62): scan_in1
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,63): scan_in2
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,64): scan_in3
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,65): scan_in4
+
+
+
+	u_tag (
+
+	    |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_icache.v,426|5): 5 input ports were not connected:
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,60): scan_in0
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,61): scan_in1
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,62): scan_in2
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,63): scan_in3
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,64): scan_in4
+
+
+
+	u_data (
+
+	     |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_icache.v,441|6): 5 input ports were not connected:
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,61): scan_in0
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,62): scan_in1
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,63): scan_in2
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,64): scan_in3
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,65): scan_in4
+
+
+
+	u_tag (
+
+	    |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_dcache.v,605|5): 5 input ports were not connected:
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,60): scan_in0
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,61): scan_in1
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,62): scan_in2
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,63): scan_in3
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,64): scan_in4
+
+
+
+	u_data (
+
+	     |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_dcache.v,620|6): 5 input ports were not connected:
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,61): scan_in0
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,62): scan_in1
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,63): scan_in2
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,64): scan_in3
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,65): scan_in4
+
+
+
+	Building instance overlay tables: .................... Done
+
+	Generating native compiled code:
+
+		src.a25_alu:v <0x1d2fc7ac>
+
+			streams:  11, words:  4762
+
+		src.a25_barrel_shift:v <0x30a172c7>
+
+			streams:   6, words:  1861
+
+		src.a25_coprocessor:v <0x046e5fb2>
+
+			streams:  12, words:  4387
+
+		src.a25_core:v <0x0a7b43f1>
+
+			streams:   5, words:   963
+
+		src.a25_dcache:v <0x0926009b>
+
+			streams:  86, words: 49428
+
+		src.a25_decode:v <0x635a2c23>
+
+			streams: 109, words: 174730
+
+		src.a25_execute:v <0x529d0324>
+
+			streams:  65, words: 39362
+
+		src.a25_fetch:v <0x45109a41>
+
+			streams:  21, words:  7125
+
+		src.a25_icache:v <0x5aed331a>
+
+			streams:  61, words: 33515
+
+		src.a25_mem:v <0x1ba4280f>
+
+			streams:  40, words: 12880
+
+		src.a25_multiply:v <0x1f2cb4d3>
+
+			streams:  11, words:  6802
+
+		src.a25_register_bank:v <0x28b1e450>
+
+			streams:  46, words: 39430
+
+		src.a25_shifter:v <0x0f917acb>
+
+			streams:   2, words:  6676
+
+		src.a25_shifter:v <0x21947a3b>
+
+			streams:   2, words: 57997
+
+		src.a25_wishbone:v <0x059e576a>
+
+			streams:  10, words:  7459
+
+		src.a25_wishbone_buf:v <0x69e8ba00>
+
+			streams:  22, words:  9591
+
+		src.a25_write_back:v <0x2e9b6883>
+
+			streams:   5, words:  1577
+
+		worklib.ACCUM:v <0x47b0e961>
+
+			streams:   2, words:   621
+
+		worklib.ADDB:v <0x34fc96a2>
+
+			streams:   5, words:  1037
+
+		worklib.ADDC:v <0x4cda4297>
+
+			streams:   6, words:  1366
+
+		worklib.APRSC:v <0x0be158ea>
+
+			streams:  35, words: 14836
+
+		worklib.CFG_INT:v <0x4ac457cf>
+
+			streams:  30, words: 13392
+
+		worklib.CLK_GEN:v <0x22513215>
+
+			streams:  20, words:  7024
+
+		worklib.DELAY:v <0x2acbe3d5>
+
+			streams:   3, words: 11954
+
+		worklib.DELAY:v <0x488cc3c2>
+
+			streams:   3, words: 11547
+
+		worklib.DELAY:v <0x4938a5e4>
+
+			streams:   3, words:  6538
+
+		worklib.FLOATA:v <0x76437ae6>
+
+			streams:   5, words:  4190
+
+		worklib.FLOATB:v <0x6777c828>
+
+			streams:   6, words:  4423
+
+		worklib.FMULT:v <0x0fde81de>
+
+			streams:   9, words:  5034
+
+		worklib.FMULT_ACCUM:v <0x5c4277f3>
+
+			streams:  13, words: 12998
+
+		worklib.LIMC:v <0x4eefd0a4>
+
+			streams:   1, words:   852
+
+		worklib.LIMD:v <0x62299555>
+
+			streams:   1, words:  1064
+
+		worklib.TDMI:v <0x056cc613>
+
+			streams:  24, words:  9300
+
+		worklib.TDMO:v <0x5c1d98f5>
+
+			streams: 135, words: 55754
+
+		worklib.TRIGB:v <0x76fe6b46>
+
+			streams:   1, words:   323
+
+		worklib.UPA1:v <0x785bd1be>
+
+			streams:   6, words:  1441
+
+		worklib.UPA2:v <0x6b2dfce0>
+
+			streams:  13, words:  3117
+
+		worklib.UPB:v <0x22b32cbb>
+
+			streams:   9, words:  2418
+
+		worklib.XOR:v <0x3ce8ad82>
+
+			streams:   1, words:   337
+
+		worklib.boot_mem128:v <0x1d995eb2>
+
+			streams:   9, words:  2431
+
+		worklib.enc:v <0x4aa1cce9>
+
+			streams:  16, words:  5297
+
+		worklib.generic_sram_byte_en:v <0x44a87ced>
+
+			streams:   4, words: 158190
+
+		worklib.generic_sram_byte_en:v <0x7c973398>
+
+			streams:   4, words: 283462
+
+		worklib.generic_sram_line_en:v <0x37dfa903>
+
+			streams:   4, words: 74613
+
+		worklib.interrupt_controller:v <0x4531c281>
+
+			streams:  24, words: 12570
+
+		worklib.main_mem:v <0x29eaaef9>
+
+			streams:  47, words: 17976
+
+		worklib.tb_uart:v <0x68278dd9>
+
+			streams:  30, words: 11804
+
+		worklib.test:v <0x1a2d4759>
+
+			streams:  84, words: 164108
+
+		worklib.test_module:v <0x279273ec>
+
+			streams:  27, words: 13510
+
+		worklib.timer_module:v <0x7faec0ed>
+
+			streams:  24, words: 14684
+
+		worklib.uart:v <0x70eaef68>
+
+			streams: 112, words: 60859
+
+		worklib.wishbone_arbiter:v <0x4db8f08b>
+
+			streams:  27, words: 21259
+
+	Building instance specific data structures.
+
+	Loading native compiled code:     .................... Done
+
+	Design hierarchy summary:
+
+		                  Instances  Unique
+
+		Modules:                117      52
+
+		Primitives:              15       2
+
+		Timing outputs:          15       1
+
+		Registers:              976     839
+
+		Scalar wires:           493       -
+
+		Expanded wires:        1696      44
+
+		Vectored wires:         443       -
+
+		Always blocks:          213     156
+
+		Initial blocks:           7       9
+
+		Cont. assignments:      462     663
+
+		Pseudo assignments:      39      33
+
+		Simulation timescale:   1ps
+
+	Writing initial simulation snapshot: worklib.test:v
+
+Loading snapshot worklib.test:v .................... Done
+
+ncsim> source /tools/rhel6/cadence/incisive/current/tools/inca/files/ncsimrc
+
+ncsim> 
+
+ncsim> #
+
+ncsim> # dump switching activity for power analysis
+
+ncsim> #
+
+ncsim> dumpsaif -overwrite -hierarchy -scope test.top -output ./saif/enc_bw.saif
+
+ncsim> run
+
+Load boot memory from ../sw/arm-unknown-eabi/boot-loader-serial/boot-loader-serial.mem
+
+Read in 2080 lines
+
+Core amber25, log file tests.log, timeout 0, test name enc 
+
+Load main memory from ../sw/arm-unknown-eabi/mc_adpcm_soc/enc.mem
+
+Read in 142758 lines
+
+   enc 40    ovr        reset   MM law
+
+Current channel being tested with main vectors is:          13
+
+Other channels being tested with null vectors
+
+Amber Boot Loader v20150406182528
+
+j 0x00008000
+
+                
+
+   13384608.00ns Passing tests so far. Currently on test number         100
+
+   25887648.00ns Passing tests so far. Currently on test number         200
+
+   38390688.00ns Passing tests so far. Currently on test number         300
+
+   50893728.00ns Passing tests so far. Currently on test number         400
+
+   63396768.00ns Passing tests so far. Currently on test number         500
+
+   75899808.00ns Passing tests so far. Currently on test number         600
+
+   88402848.00ns Passing tests so far. Currently on test number         700
+
+  100905888.00ns Passing tests so far. Currently on test number         800
+
+  113408928.00ns Passing tests so far. Currently on test number         900
+
+  125911968.00ns Passing tests so far. Currently on test number        1000
+
+  138415008.00ns Passing tests so far. Currently on test number        1100
+
+  150918048.00ns Passing tests so far. Currently on test number        1200
+
+  163421088.00ns Passing tests so far. Currently on test number        1300
+
+  175924128.00ns Passing tests so far. Currently on test number        1400
+
+  188427168.00ns Passing tests so far. Currently on test number        1500
+
+  200930208.00ns Passing tests so far. Currently on test number        1600
+
+  213433248.00ns Passing tests so far. Currently on test number        1700
+
+  225936288.00ns Passing tests so far. Currently on test number        1800
+
+  238439328.00ns Passing tests so far. Currently on test number        1900
+
+  250942368.00ns Passing tests so far. Currently on test number        2000
+
+  257064951.00ns TESTBENCHFINISHED: simulation complete
+
+Simulation complete via $finish(1) at time 257064950645 PS + 0
+
+./src/enc_vec_test.v:530 			$finish;
+
+ncsim> exit
+
+TOOL:	ncverilog	14.10-s032: Exiting on Apr 26, 2016 at 21:51:06 EDT  (total: 00:37:35)
+
+
+-----------------------------------------------------------------------------

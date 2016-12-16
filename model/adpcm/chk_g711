@@ -1,0 +1,64 @@
+#!/bin/csh -f
+#
+set DEBUG = "" ;
+set HELP = 0 ;
+set HEAD = "head --lines=4 " ;
+set i = 1 ;
+
+#
+# collect arguments
+#
+while ( $i <= $#argv )
+  switch ( ${argv[${i}]} )
+    case "-d":
+    case "-debug":
+      set DEBUG = " -d " ;
+      breaksw
+    case "-h":
+    case "-help":
+      set HELP = 1 ;
+      breaksw
+    default:
+      breaksw
+  endsw
+  @ i = $i + 1 ;
+end
+
+#
+# print usage
+#
+if ($HELP) then
+  echo "USAGE : $0 [-debug] [-help]"
+  echo "        -debug : enable debug printing";
+  echo "        -help  : print help message";
+  exit
+endif
+
+if (! -d ./vector_out/ulaw) then
+	mkdir -p ./vector_out/ulaw
+endif
+
+if (! -d ./vector_out/alaw) then
+	mkdir -p ./vector_out/alaw
+endif
+
+echo ""
+echo "*** Dumping vectors in ./vector_out/alaw ***"
+echo "*** Dumping vectors in ./vector_out/ulaw ***"
+echo ""
+
+set ENC = "./tst_g711 ${DEBUG}"
+set DEC = "./tst_g711 -D ${DEBUG}"
+
+echo "*** Running G.711 A-law encoder test ***"
+${ENC} -a >&! out_enc_g711.a
+
+echo "*** Running G.711 mu-law encoder test ***"
+${ENC} >&! out_enc_g711.mu
+
+echo "*** Running G.711 A-law decoder test ***"
+${DEC} -a >&! out_dec_g711.a
+
+echo "*** Running G.711 mu-law decoder test ***"
+${DEC} >&! out_dec_g711.mu
+

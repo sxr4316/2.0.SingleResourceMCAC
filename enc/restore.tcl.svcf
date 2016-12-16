@@ -1,0 +1,262 @@
+# SimVision Command Script (Mon Apr 25 09:17:57 PM EDT 2016)
+#
+# Version 14.10.s032
+#
+# You can restore this configuration with:
+#
+#      ncverilog +ncaccess+r +ncvpicompat+1364v1995 +nowarnTFNPC +nowarnIWFA +nowarnSVTL +nowarnSDFNCAP +gui +nclinedebug -s -f etc/enc.vec.rtl.f -input etc/dumpsaif.tcl +tcl+restore.tcl
+#
+
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-SimControl-WatchList {
+  usual
+  position -row 1
+}
+preferences set waveform-print-variables all
+preferences set waveform-print-time all
+preferences set toolbar-CursorControl-WatchList {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -anchor e
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -anchor e
+}
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-print-colors {As shown on screen}
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2
+}
+preferences set toolbar-TimeSearch-WatchList {
+  usual
+  position -pos 2
+}
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# Simulator
+#
+database require simulator -hints {
+	simulator "ncverilog +ncaccess+r +ncvpicompat+1364v1995 +nowarnTFNPC +nowarnIWFA +nowarnSVTL +nowarnSDFNCAP +gui +nclinedebug -s -f etc/enc.vec.rtl.f -input etc/dumpsaif.tcl -input restore.tcl"
+}
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set \
+    -signalsort name
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1226x936+0+25}] != ""} {
+    window geometry "Waveform 1" 1226x936+0+25
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ps \
+    -valuewidth 75
+waveform baseline set -time 885us
+
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.enc_o_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.config_mod.enc_ch[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.enc_o}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.enc_s_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.enc_s}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.enc_o_fs}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.data_out[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_adr[4]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_dat_r[4]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_dat_w[4]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.enc_s_fs}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_stb[4]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_we[4]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_ack[4]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_dat_r[8]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_stb[8]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_we[8]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.program_start}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.captured_data}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.tdmo_ch_count[4:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_ack[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_adr[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_cyc[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_dat_w[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_dat_r[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_sel[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_stb[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_we[2]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.tdmo_test_count}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.UART_BIT_PERIOD}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_ack[7]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.CLKS_PER_BIT}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.tdmi_inst0.new_data_int}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.config_mod.enc_ch[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.config_mod.dec_ch[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.config_mod.o_wb_dat_e[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.config_mod.o_wb_ack_e}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_dat_w[8]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.s_wb_ack[8]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.top.tdmo_inst0.data_reg[31:0]}]}
+	} ]]
+waveform hierarchy expand $id
+
+waveform xview limits 793963888ps 793975770ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x729+445+178
+
+#
+# Layout selection
+#
+

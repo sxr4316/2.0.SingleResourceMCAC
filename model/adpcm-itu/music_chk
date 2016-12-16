@@ -1,0 +1,85 @@
+#!/bin/csh -f
+#
+set DEBUG = "" ;
+set TEST = "" ;
+set HELP = 0 ;
+set ULAW = 0 ;
+set ALAW = 0 ;
+set HEAD = "head --lines=4 " ;
+set i = 1 ;
+
+#
+# collect arguments
+#
+while ( $i <= $#argv )
+  switch ( ${argv[${i}]} )
+    case "-u":
+    case "-ulaw":
+      set ULAW = 1 ;
+      breaksw
+    case "-a":
+    case "-alaw":
+      set ALAW = 1 ;
+      breaksw
+    case "-d":
+    case "-debug":
+      set DEBUG = " -d " ;
+      breaksw
+    case "-t":
+    case "-test":
+      set TEST = " -t " ;
+      breaksw
+    case "-h":
+    case "-help":
+      set HELP = 1 ;
+      breaksw
+    default:
+      breaksw
+  endsw
+  @ i = $i + 1 ;
+end
+
+#
+# print usage
+#
+if ($HELP) then
+  echo "USAGE : $0 [-ulaw] [-alaw] [-debug] [-test] [-help]"
+  echo "        -ulaw  : run only ulaw tests";
+  echo "        -alaw  : run only alaw tests";
+  echo "        -debug : enable debug printing";
+  echo "        -test  : enable codec state printing";
+  echo "        -help  : print help message";
+  exit
+endif
+
+if ((! $ULAW) && (! $ALAW)) then
+	set ULAW = 1 ;
+	set ALAW = 1 ;
+endif
+
+set ENC = "./enc ${DEBUG} ${TEST}"
+set DEC = "./dec ${DEBUG} ${TEST}"
+set STRIPINIT = "./stripInit"
+
+set PCMA2B = "./pcma2b"
+set PCMB2A = "./pcmb2a"
+#cat test_vectors/ansi/u_law/init1.mu >! input_pcm.mu
+#cat test_vectors/ansi/u_law/vector1.mu >> input_pcm.mu
+#cat test_vectors/itu_ulaw/PCM_INIT.M >! input_pcm.mu
+${PCMB2A} -i musictst.au -o mtst.m
+
+cat mtst.m>! input_pcm.mu
+#**************************************40 vectors**************************************
+echo "u-law encoder/ decoder broad/ narrow band signal test"
+${ENC} -a -i input_pcm.mu -o out_enc.mu -r 16 
+#${STRIPINIT} -i out_enc.mu -o out_enc_strip.mu
+echo "Encoding"
+#cmp out_enc_strip.mu test_vectors/ansi/u_law/vector2.mu
+#cmp out_enc_strip.mu test_vectors/itu_ulaw/HOMING/32/HN32FM.I
+
+${DEC} -a -i out_enc.mu -o out_music_dec.mu -r 16 
+#${STRIPINIT} -i out_dec.mu -o out_dec_strip.mu
+echo "Decoding"
+#cmp out_dec_strip.mu test_vectors/ansi/u_law/vector3.mu
+
+${PCMA2B} -n -i out_music_dec.mu -o music_tst_out.au

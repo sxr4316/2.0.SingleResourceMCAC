@@ -1,0 +1,123 @@
+ADPCM COMPUTATION BLOCKS:
+
+EXPAND BLOCK:
+	- uLaw --> linear PCM 			SL = UEXPAND(SS)
+	- ALaw --> linear PCM			SL = AEXPAND(SS)
+
+COMPRESS BLOCK:
+	- linear PCM --> uLaw			SP = UCOMPRESS(SR)
+	- linear PCM --> ALaw			SP = ACOMPRESS(SR)
+
+ENCODER BLOCK:
+	- Difference signal			D = SUBTA(SE,SL)
+
+	- Difference signal sign & log		DL,DS = LOG(D) 
+	- Norm. Difference to Y(k)		DLN = SUBTB(DL,Y)
+	- ADPCM output				I = QUAN(DLN,DS)
+
+DECODER BLOCK:
+	- PCM reconstructed signal		SP = U/ACOMPRESS(SR)
+	- Quantized reconstructed signal	SLX = U/AEXPAND(SLX)
+
+	- Difference signal			DX = SUBTA(SLX,SE)
+	- Difference signal log and sign	DLX = LOG(DX)
+	- Norm. Difference to Y(k)		DLNX = SUBTB(DLX,Y)
+	- Reencode the PCM DATA			SD = SYNC(I,SP,DLNX,DSX)
+
+BLOCK A:
+	- Predictor coefficients	WA1-2,WB1-6 = FMULT(An,Bn,SRn,DQn)
+	- Signal Estimates		SE,SEZ = ACCUM(WA1-2,WB1-6)
+	- Limited speed control		AL = LIMA(AP)
+	- Quantizer scale factor	Y = MIX(AL,YU,YL)
+	
+BLOCK B:
+	- Quantized Norm. difference and sign	DQLN,DQS = RECONST(I)
+	- Quantized difference log		DQL = ADDA(DQLN,Y)
+	- Quantized difference			DQ = ANTILOG(DQL,DQS)
+
+	- Tone transition detect		TR = TRANS(TD,YL,DQ)
+
+	- Sign of DQ+SEZ and sign flag		PK0,SIGPK = ADDC(DQ,SEZ)
+	- Unlimited a2 coefficient		A2T = UPA2(PK0-2,A1-2,SIGPK)
+	- 2nd order predictor coefficient	A2P = LIMC(A2T)
+
+	- Tone detect				TDP = TONE(A2P)
+	- Triggered tone detect			TDR = TRIGB(TR,TDP)
+
+	- Reconstructed signal			SR = ADDB(DQ,SE)
+	- Reconstructed signal with delay 0	SR0 = FLOATB(SR)
+	- Quantized difference with delay 0	DQ0 = FLOATA(DQ)
+	- Pred. Coeff. sign bit updates		U1-6 = XOR(DQ1-6,DQ)
+	- Sixth order pred. coeff.		B1P-B6P = UPB(U1-6,B1-6,DQ)
+	- Triggered sixth order pred. coeff.	B1R-B6R = TRIGB(B1P-B6P,TR)
+	- Triggered 2nd order Coeff.		A2R = TRIGB(A2P,TR)
+	- Unlimited 1st Coeff.			A1T = UPA1(PK0-1,A1,SIGPK)
+	- 2nd coeff.				A1P = LIMD(A1T,A2P)
+	- Triggered 2nd coeff.			A1R = TRIGB(A1P,TR)
+
+	- Quantizer multiplier 			WI = FUNCTW(I)
+	- Unlimited quantizer scale factor	YUT = FILTD(WI,Y)
+	- Fast quantizer scale factor		YUP = LIMB(YUT)
+	- Slow quantizer scale factor		YLP = FILTE(YUP,YL)
+
+	- Speed of adaptation function		FI = FUNCTF(I)
+	- Short term average of FI seq.		DMSP = FILTA(FI,DMS)
+	- Long term average of FI seq.		DMLP = FILTB(FI,DML)
+	- Speed control parameter		AX = SUBTC(DMSP,DMLP,Y,TDP)
+	- Unlimited speed control parameter	APP = FILTC(AX,AP)
+	- Triggered Unlimited speed control	APR = TRIGA(APP,TR)
+
+BLOCK C: ( some of these variable transfers may not be necessary if the
+	   variable on the left of the assignment is not used in calculations
+	   after the variable on the right of the assignment is determined.)
+
+	- Fast quantizer scale factor		YU = YUP    <--- 544  
+	- Slow quantizer scale factor		YL = YLP    <--- 34816
+
+	- Short term average of speed seq.	DMS = DMSP  <--- 0 
+	- Long term average of speed seq.	DML = DMLP  <--- 0
+
+	- Unlimited speed control		AP = APR    <--- 0
+
+	- Sign of DQ & SEZ 			PK2 = PK1   <--- 0
+	 					PK1 = PK0   <--- 0
+
+	- Reconstructured Signal		SR2 = SR1   <--- 32
+						SR1 = SR0   <--- 32
+
+	- Sixth order coefficients		B1 = B1R    <--- 0
+						B2 = B2R    <--- 0
+						B3 = B3R    <--- 0
+						B4 = B4R    <--- 0
+						B5 = B5R    <--- 0
+						B6 = B6R    <--- 0
+
+	- Quantized difference			DQ6 = DQ5   <--- 32
+						DQ5 = DQ4   <--- 32
+						DQ4 = DQ3   <--- 32
+						DQ3 = DQ2   <--- 32
+						DQ2 = DQ1   <--- 32
+						DQ1 = DQ0   <--- 32
+
+	- 2nd order predictor coefficients	A2 = A2R    <--- 0
+						A1 = A1R    <--- 0
+
+	- Tone detect				TD = TDR    <--- 0
+
+
+	
+	ADPCM ENCODER:
+
+	(0) EXPAND BLOCK
+	(1) BLOCK A
+	(2) ENCODER BLOCK
+	(3) BLOCK B
+	(4) BLOCK C
+
+	ADPCM DECODER:
+
+	(0) GET ADPCM SAMPLE	
+	(1) BLOCK A
+	(2) BLOCK B 
+	(3) DECODER BLOCK
+	(4) BLOCK C	

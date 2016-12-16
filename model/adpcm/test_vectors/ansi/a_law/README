@@ -1,0 +1,30 @@
+
+init1.a    -> a-law pcm initialization sequence
+init2.a    -> adpcm initialization sequence
+------------------------------------------------------------------
+Narrow band/ Broad band signal test:
+
+(init1.a + vector1.a)->[encoder]->+->[decoder]->(init-header + vector3.a)
+                                  |
+                                  +->(init-header + vector2.a)
+
+vector1.a  -> a-law encoder input sequence
+vector2.a  -> corresponding adpcm encoder output sequence
+vector3.a  -> corresponding a-law pcm decoder output sequence
+------------------------------------------------------------------
+Decoder polarity sequence test:
+
+(init2.a + vector4.a) ->[decoder]->(init-header + vector5.a)
+
+vector4.a  -> adpcm decoder input sequence
+vector5.a  -> corresponding a-law pcm decoder output sequence
+------------------------------------------------------------------
+Overload signal test:
+
+(init1.a + vector6.a) ->[encoder]->+->[decoder]->(init-header + vector8.a)
+                                   |
+                                   +->(init-header + vector7.a)
+
+vector6.a  -> a-law encoder input sequence
+vector7.a  -> corresponding adpcm encoder output sequence
+vector8.a  -> corresponding a-law pcm decoder output sequence

@@ -1,0 +1,1280 @@
+Running test DHNAA24
+Started test at local date and time Fri Apr 29 10:27:46 2016
+This module is assigned to Siddharth. An email will be sent to him/her at: sxr4316@rit.edu
+
+Current tester: Siddharth (username: sxr4316)
+
+-----------------------------------------------------------------------------
+Current git version: 75f8ff54dcfede995062e5e767bd012ff6f39d15
+ 
+Starting RTL simulation.
+
+
+RTL simulation script has completed.
+
+
+-----------------------------------------------------------------------------
+
+RTL simulation passed.
+
+
+Ended test at local date and time Sat Apr 30 03:50:09 2016
+
+-----------------------------------------------------------------------------
+
+
+Reading tests that have been done from database:
+Dave did test DRNAA40 starting at Wed Apr 27 13:52:25 2016 and it passed.
+Adam did test DRNAA16 starting at Thu Apr 28 13:30:16 2016 and it passed.
+Dave did test DRNMM40 starting at Thu Apr 28 07:31:31 2016 and it passed.
+Dave did test DRNMM24 starting at Thu Apr 28 07:30:38 2016 and it passed.
+Dave did test DRNMM32 starting at Thu Apr 28 07:31:06 2016 and it passed.
+Dave did test DRNMM16 starting at Thu Apr 28 07:30:08 2016 and it passed.
+Adam did test DRNAA32 starting at Fri Apr 29 10:13:08 2016 and it passed.
+Adam did test DRNAA24 starting at Fri Apr 29 10:12:10 2016 and it passed.
+Connor did test DROAA16 starting at Fri Apr 29 15:39:38 2016 and it failed.
+Connor did test DROAA24 starting at Fri Apr 29 15:39:50 2016 and it failed.
+Connor did test DROAA32 starting at Fri Apr 29 15:41:31 2016 and it passed.
+Connor did test DROAA16 starting at Fri Apr 29 15:40:56 2016 and it passed.
+Connor did test DROMM16 starting at Fri Apr 29 15:43:06 2016 and it passed.
+Connor did test DROAA40 starting at Fri Apr 29 16:20:58 2016 and it passed.
+Connor did test DROAA24 starting at Fri Apr 29 16:21:27 2016 and it passed.
+Swathika did test DHNMM16 starting at Fri Apr 29 17:23:13 2016 and it failed.
+Ghassan did test DROAM16 starting at Fri Apr 29 19:50:07 2016 and it passed.
+Ghassan did test DROAM24 starting at Fri Apr 29 19:50:52 2016 and it passed.
+Ghassan did test DROAM40 starting at Fri Apr 29 19:53:11 2016 and it passed.
+Ghassan did test DROAM32 starting at Fri Apr 29 19:52:22 2016 and it passed.
+Jason did test DROMM40 starting at Fri Apr 29 20:44:06 2016 and it passed.
+Jason did test DROMM32 starting at Fri Apr 29 20:43:41 2016 and it passed.
+Jason did test DROMM24 starting at Fri Apr 29 20:43:09 2016 and it passed.
+Ghassan did test DHOMM40 starting at Fri Apr 29 19:45:52 2016 and it passed.
+Swathika did test DHOMA40 starting at Fri Apr 29 17:37:40 2016 and it passed.
+Ghassan did test DHOMM32 starting at Fri Apr 29 19:43:30 2016 and it passed.
+Swathika did test DHOMA32 starting at Fri Apr 29 17:35:47 2016 and it passed.
+Surya did test DHOMM24 starting at Fri Apr 29 18:01:47 2016 and it passed.
+Surya did test DHOAA24 starting at Fri Apr 29 17:58:10 2016 and it passed.
+Surya did test DHOAA40 starting at Fri Apr 29 18:00:10 2016 and it passed.
+Surya did test DHOMM16 starting at Fri Apr 29 18:01:30 2016 and it passed.
+Surya did test DHOAA32 starting at Fri Apr 29 17:59:36 2016 and it passed.
+Siddharth did test DHNAA40 starting at Fri Apr 29 10:28:27 2016 and it passed.
+Siddharth did test DHNAA24 starting at Fri Apr 29 10:27:46 2016 and it passed.
+
+-----------------------------------------------------------------------------
+RTL SIMULATION LOG CONTENTS:
+
+ncverilog(64): 14.10-s032: (c) Copyright 1995-2015 Cadence Design Systems, Inc.
+
+TOOL:	ncverilog	14.10-s032: Started on Apr 29, 2016 at 10:27:56 EDT
+
+ncverilog
+
+	+ncaccess+r
+
+	+ncvpicompat+1364v1995
+
+	+nowarnTFNPC
+
+	+nowarnIWFA
+
+	+nowarnSVTL
+
+	+nowarnSDFNCAP
+
+	-run
+
+	+ncrun
+
+	-f etc/dec.vec.rtl.f
+
+		+nowarnTFNPC
+
+		+nowarnIWFA
+
+		+nowarnSVTL
+
+		src/timescale.v
+
+		src/dec_vec_test.v
+
+		src/tb_uart.v
+
+		src/dumpvcd.v
+
+		src/main_mem.v
+
+		src/dec.v
+
+		-y
+
+		../a25_core/src/
+
+		../generic_sram_byte_en/src/generic_sram_byte_en.v
+
+		../generic_sram_line_en/src/generic_sram_line_en.v
+
+		../wishbone_arbiter/src/wishbone_arbiter.v
+
+		../boot_mem128/src/boot_mem128.v
+
+		../APRSC/src/APRSC.v
+
+		../uart/src/uart.v
+
+		../TDMI/src/TDMI.v
+
+		../test_module/src/test_module.v
+
+		../timer_module/src/timer_module.v
+
+		../interrupt_controller/src/interrupt_controller.v
+
+		../TDMO/src/TDMO.v
+
+		../CFG_INT/src/CFG_INT.v
+
+		../CLK_GEN/src/CLK_GEN.v
+
+		../ADDB/src/ADDB.v
+
+		../ADDC/src/ADDC.v
+
+		../DELAY/src/DELAY.v
+
+		../FMULT_ACCUM/src/FMULT_ACCUM.v
+
+		../FLOATA/src/FLOATA.v
+
+		../FLOATB/src/FLOATB.v
+
+		../LIMC/src/LIMC.v
+
+		../LIMD/src/LIMD.v
+
+		../TRIGB/src/TRIGB.v
+
+		../UPA1/src/UPA1.v
+
+		../UPA2/src/UPA2.v
+
+		../UPB/src/UPB.v
+
+		../XOR/src/XOR.v
+
+		../FMULT/src/FMULT.v
+
+		../ACCUM/src/ACCUM.v
+
+		-v
+
+		/classes/ee620/maieee/lib/synopsys/TSMC_tcbc65/TSMCHOME/digital/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v
+
+		+libext+.v
+
+		+librescan
+
+	-input
+
+	etc/dumpsaif.tcl
+
+file: src/timescale.v
+
+file: src/dec_vec_test.v
+
+	module worklib.test:v
+
+		errors: 0, warnings: 0
+
+file: src/tb_uart.v
+
+	module worklib.tb_uart:v
+
+		errors: 0, warnings: 0
+
+file: src/dumpvcd.v
+
+	module worklib.dumpvcd:v
+
+		errors: 0, warnings: 0
+
+file: src/main_mem.v
+
+	module worklib.main_mem:v
+
+		errors: 0, warnings: 0
+
+file: src/dec.v
+
+	module worklib.dec:v
+
+		errors: 0, warnings: 0
+
+file: ../generic_sram_byte_en/src/generic_sram_byte_en.v
+
+	module worklib.generic_sram_byte_en:v
+
+		errors: 0, warnings: 0
+
+file: ../generic_sram_line_en/src/generic_sram_line_en.v
+
+	module worklib.generic_sram_line_en:v
+
+		errors: 0, warnings: 0
+
+file: ../wishbone_arbiter/src/wishbone_arbiter.v
+
+	module worklib.wishbone_arbiter:v
+
+		errors: 0, warnings: 0
+
+file: ../boot_mem128/src/boot_mem128.v
+
+	module worklib.boot_mem128:v
+
+		errors: 0, warnings: 0
+
+file: ../APRSC/src/APRSC.v
+
+	module worklib.APRSC:v
+
+		errors: 0, warnings: 0
+
+file: ../uart/src/uart.v
+
+	module worklib.uart:v
+
+		errors: 0, warnings: 0
+
+file: ../TDMI/src/TDMI.v
+
+	module worklib.TDMI:v
+
+		errors: 0, warnings: 0
+
+file: ../test_module/src/test_module.v
+
+	module worklib.test_module:v
+
+		errors: 0, warnings: 0
+
+file: ../timer_module/src/timer_module.v
+
+	module worklib.timer_module:v
+
+		errors: 0, warnings: 0
+
+file: ../interrupt_controller/src/interrupt_controller.v
+
+	module worklib.interrupt_controller:v
+
+		errors: 0, warnings: 0
+
+file: ../TDMO/src/TDMO.v
+
+	module worklib.TDMO:v
+
+		errors: 0, warnings: 0
+
+file: ../CFG_INT/src/CFG_INT.v
+
+	module worklib.CFG_INT:v
+
+		errors: 0, warnings: 0
+
+file: ../CLK_GEN/src/CLK_GEN.v
+
+	module worklib.CLK_GEN:v
+
+		errors: 0, warnings: 0
+
+file: ../ADDB/src/ADDB.v
+
+	module worklib.ADDB:v
+
+		errors: 0, warnings: 0
+
+file: ../ADDC/src/ADDC.v
+
+	module worklib.ADDC:v
+
+		errors: 0, warnings: 0
+
+file: ../DELAY/src/DELAY.v
+
+	module worklib.DELAY:v
+
+		errors: 0, warnings: 0
+
+file: ../FMULT_ACCUM/src/FMULT_ACCUM.v
+
+	module worklib.FMULT_ACCUM:v
+
+		errors: 0, warnings: 0
+
+file: ../FLOATA/src/FLOATA.v
+
+	module worklib.FLOATA:v
+
+		errors: 0, warnings: 0
+
+file: ../FLOATB/src/FLOATB.v
+
+	module worklib.FLOATB:v
+
+		errors: 0, warnings: 0
+
+file: ../LIMC/src/LIMC.v
+
+	module worklib.LIMC:v
+
+		errors: 0, warnings: 0
+
+file: ../LIMD/src/LIMD.v
+
+	module worklib.LIMD:v
+
+		errors: 0, warnings: 0
+
+file: ../TRIGB/src/TRIGB.v
+
+	module worklib.TRIGB:v
+
+		errors: 0, warnings: 0
+
+file: ../UPA1/src/UPA1.v
+
+	module worklib.UPA1:v
+
+		errors: 0, warnings: 0
+
+file: ../UPA2/src/UPA2.v
+
+	module worklib.UPA2:v
+
+		errors: 0, warnings: 0
+
+file: ../UPB/src/UPB.v
+
+	module worklib.UPB:v
+
+		errors: 0, warnings: 0
+
+file: ../XOR/src/XOR.v
+
+	module worklib.XOR:v
+
+		errors: 0, warnings: 0
+
+file: ../FMULT/src/FMULT.v
+
+	module worklib.FMULT:v
+
+		errors: 0, warnings: 0
+
+file: ../ACCUM/src/ACCUM.v
+
+	module worklib.ACCUM:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_core.v
+
+	module src.a25_core:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_fetch.v
+
+	module src.a25_fetch:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_decode.v
+
+	module src.a25_decode:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_execute.v
+
+	module src.a25_execute:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_mem.v
+
+	module src.a25_mem:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_write_back.v
+
+	module src.a25_write_back:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_wishbone.v
+
+	module src.a25_wishbone:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_coprocessor.v
+
+	module src.a25_coprocessor:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_icache.v
+
+	module src.a25_icache:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_decompile.v
+
+	module src.a25_decompile:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_barrel_shift.v
+
+	module src.a25_barrel_shift:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_alu.v
+
+	module src.a25_alu:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_multiply.v
+
+	module src.a25_multiply:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_register_bank.v
+
+	module src.a25_register_bank:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_dcache.v
+
+	module src.a25_dcache:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_wishbone_buf.v
+
+	module src.a25_wishbone_buf:v
+
+		errors: 0, warnings: 0
+
+file: ../a25_core/src//a25_shifter.v
+
+	module src.a25_shifter:v
+
+		errors: 0, warnings: 0
+
+file: /classes/ee620/maieee/lib/synopsys/TSMC_tcbc65/TSMCHOME/digital/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v
+
+	module tcbn65lp.CLKBUFX4:v
+
+		errors: 0, warnings: 0
+
+	module tcbn65lp.CLKINVX4:v
+
+		errors: 0, warnings: 0
+
+		Caching library 'worklib' ....... Done
+
+		Caching library 'tcbn65lp' ....... Done
+
+		Caching library 'src' ....... Done
+
+	Elaborating the design hierarchy:
+
+	u_mem (
+
+	    |
+
+ncelab: *W,CUVWSI (../boot_mem128/src/boot_mem128.v,174|5): 5 input ports were not connected:
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,61): scan_in0
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,62): scan_in1
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,63): scan_in2
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,64): scan_in3
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,65): scan_in4
+
+
+
+	u_tag (
+
+	    |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_icache.v,426|5): 5 input ports were not connected:
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,60): scan_in0
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,61): scan_in1
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,62): scan_in2
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,63): scan_in3
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,64): scan_in4
+
+
+
+	u_data (
+
+	     |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_icache.v,441|6): 5 input ports were not connected:
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,61): scan_in0
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,62): scan_in1
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,63): scan_in2
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,64): scan_in3
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,65): scan_in4
+
+
+
+	u_tag (
+
+	    |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_dcache.v,605|5): 5 input ports were not connected:
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,60): scan_in0
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,61): scan_in1
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,62): scan_in2
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,63): scan_in3
+
+ncelab: (../generic_sram_line_en/src/generic_sram_line_en.v,64): scan_in4
+
+
+
+	u_data (
+
+	     |
+
+ncelab: *W,CUVWSI (../a25_core/src/a25_dcache.v,620|6): 5 input ports were not connected:
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,61): scan_in0
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,62): scan_in1
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,63): scan_in2
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,64): scan_in3
+
+ncelab: (../generic_sram_byte_en/src/generic_sram_byte_en.v,65): scan_in4
+
+
+
+	Building instance overlay tables: .................... Done
+
+	Generating native compiled code:
+
+		src.a25_alu:v <0x341649ed>
+
+			streams:  11, words:  4762
+
+		src.a25_barrel_shift:v <0x3dfcd8ae>
+
+			streams:   6, words:  1861
+
+		src.a25_coprocessor:v <0x35da6eab>
+
+			streams:  12, words:  4387
+
+		src.a25_core:v <0x75d141d1>
+
+			streams:   5, words:   963
+
+		src.a25_dcache:v <0x2bee3771>
+
+			streams:  86, words: 49428
+
+		src.a25_decode:v <0x65fd7c8f>
+
+			streams: 109, words: 174730
+
+		src.a25_execute:v <0x1a1aa314>
+
+			streams:  65, words: 39362
+
+		src.a25_fetch:v <0x66d1f743>
+
+			streams:  21, words:  7125
+
+		src.a25_icache:v <0x5e006335>
+
+			streams:  61, words: 33515
+
+		src.a25_mem:v <0x4ad4063a>
+
+			streams:  40, words: 12880
+
+		src.a25_multiply:v <0x36133714>
+
+			streams:  11, words:  6802
+
+		src.a25_register_bank:v <0x4ab10f89>
+
+			streams:  46, words: 39430
+
+		src.a25_shifter:v <0x0f6828d1>
+
+			streams:   2, words: 57997
+
+		src.a25_shifter:v <0x7d65296c>
+
+			streams:   2, words:  6676
+
+		src.a25_wishbone:v <0x12099765>
+
+			streams:  10, words:  7459
+
+		src.a25_wishbone_buf:v <0x0a23ef32>
+
+			streams:  22, words:  9591
+
+		src.a25_write_back:v <0x3bf6ce6a>
+
+			streams:   5, words:  1577
+
+		worklib.ACCUM:v <0x3f027ef9>
+
+			streams:   2, words:   621
+
+		worklib.ADDB:v <0x2fec5e8e>
+
+			streams:   5, words:  1037
+
+		worklib.ADDC:v <0x45bff265>
+
+			streams:   6, words:  1366
+
+		worklib.APRSC:v <0x79180d83>
+
+			streams:  35, words: 14836
+
+		worklib.CFG_INT:v <0x40e0ef3a>
+
+			streams:  30, words: 13392
+
+		worklib.CLK_GEN:v <0x1626d7d0>
+
+			streams:  20, words:  7024
+
+		worklib.DELAY:v <0x385d1197>
+
+			streams:   3, words: 11954
+
+		worklib.DELAY:v <0x561df184>
+
+			streams:   3, words: 11547
+
+		worklib.DELAY:v <0x56c9d3a6>
+
+			streams:   3, words:  6538
+
+		worklib.FLOATA:v <0x34f775c9>
+
+			streams:   5, words:  4190
+
+		worklib.FLOATB:v <0x262bc30b>
+
+			streams:   6, words:  4423
+
+		worklib.FMULT:v <0x6ad6770b>
+
+			streams:   9, words:  5034
+
+		worklib.FMULT_ACCUM:v <0x5a546f6e>
+
+			streams:  13, words: 12998
+
+		worklib.LIMC:v <0x4641663c>
+
+			streams:   1, words:   852
+
+		worklib.LIMD:v <0x58a19dad>
+
+			streams:   1, words:  1064
+
+		worklib.TDMI:v <0x5ffbb448>
+
+			streams:  24, words:  9300
+
+		worklib.TDMO:v <0x4bdca1dc>
+
+			streams: 135, words: 55754
+
+		worklib.TRIGB:v <0x69e46e90>
+
+			streams:   1, words:   323
+
+		worklib.UPA1:v <0x05b7379a>
+
+			streams:   6, words:  1441
+
+		worklib.UPA2:v <0x51134f80>
+
+			streams:  13, words:  3117
+
+		worklib.UPB:v <0x3dcdfe2f>
+
+			streams:   9, words:  2418
+
+		worklib.XOR:v <0x5327824d>
+
+			streams:   1, words:   337
+
+		worklib.boot_mem128:v <0x7981a935>
+
+			streams:   9, words:  2431
+
+		worklib.dec:v <0x23161472>
+
+			streams:  16, words:  5297
+
+		worklib.generic_sram_byte_en:v <0x0f5020b7>
+
+			streams:   4, words: 283462
+
+		worklib.generic_sram_byte_en:v <0x57616a17>
+
+			streams:   4, words: 158190
+
+		worklib.generic_sram_line_en:v <0x2892e137>
+
+			streams:   4, words: 74613
+
+		worklib.interrupt_controller:v <0x13400a64>
+
+			streams:  24, words: 12570
+
+		worklib.main_mem:v <0x71c004e9>
+
+			streams:  47, words: 17976
+
+		worklib.tb_uart:v <0x4565482f>
+
+			streams:  30, words: 11804
+
+		worklib.test:v <0x3ebca8ce>
+
+			streams:  82, words: 163460
+
+		worklib.test_module:v <0x7225e6d8>
+
+			streams:  27, words: 13510
+
+		worklib.timer_module:v <0x250936ef>
+
+			streams:  24, words: 14684
+
+		worklib.uart:v <0x4965465d>
+
+			streams: 112, words: 60859
+
+		worklib.wishbone_arbiter:v <0x64029325>
+
+			streams:  27, words: 21259
+
+	Building instance specific data structures.
+
+	Loading native compiled code:     .................... Done
+
+	Design hierarchy summary:
+
+		                  Instances  Unique
+
+		Modules:                117      52
+
+		Primitives:              15       2
+
+		Timing outputs:          15       1
+
+		Registers:              976     839
+
+		Scalar wires:           493       -
+
+		Expanded wires:        1696      44
+
+		Vectored wires:         443       -
+
+		Always blocks:          213     156
+
+		Initial blocks:           6       8
+
+		Cont. assignments:      462     663
+
+		Pseudo assignments:      39      33
+
+		Simulation timescale:   1ps
+
+	Writing initial simulation snapshot: worklib.test:v
+
+Loading snapshot worklib.test:v .................... Done
+
+ncsim> source /tools/rhel6/cadence/incisive/current/tools/inca/files/ncsimrc
+
+ncsim> 
+
+ncsim> #
+
+ncsim> # dump switching activity for power analysis
+
+ncsim> #
+
+ncsim> dumpsaif -overwrite -hierarchy -scope test.top -output ./saif/dec_bw.saif
+
+ncsim> run
+
+Load boot memory from ../sw/arm-unknown-eabi/boot-loader-serial/boot-loader-serial.mem
+
+Read in 2080 lines
+
+Core amber25, log file tests.log, timeout 0, test name dec 
+
+Load main memory from ../sw/arm-unknown-eabi/mc_adpcm_soc/dec.mem
+
+Read in 666780 lines
+
+   dec 24    nrm       homing   AA law
+
+Current channel being tested with main vectors is:          14
+
+Other channels being tested with null vectors
+
+Amber Boot Loader v20150406182528
+
+j 0x00008000
+
+                
+
+   13384608.00ns Passing tests so far. Currently on test number         100
+
+   25887648.00ns Passing tests so far. Currently on test number         200
+
+   38390688.00ns Passing tests so far. Currently on test number         300
+
+   50893728.00ns Passing tests so far. Currently on test number         400
+
+   63396768.00ns Passing tests so far. Currently on test number         500
+
+   75899808.00ns Passing tests so far. Currently on test number         600
+
+   88402848.00ns Passing tests so far. Currently on test number         700
+
+  100905888.00ns Passing tests so far. Currently on test number         800
+
+  113408928.00ns Passing tests so far. Currently on test number         900
+
+  125911968.00ns Passing tests so far. Currently on test number        1000
+
+  138415008.00ns Passing tests so far. Currently on test number        1100
+
+  150918048.00ns Passing tests so far. Currently on test number        1200
+
+  163421088.00ns Passing tests so far. Currently on test number        1300
+
+  175924128.00ns Passing tests so far. Currently on test number        1400
+
+  188427168.00ns Passing tests so far. Currently on test number        1500
+
+  200930208.00ns Passing tests so far. Currently on test number        1600
+
+  213433248.00ns Passing tests so far. Currently on test number        1700
+
+  225936288.00ns Passing tests so far. Currently on test number        1800
+
+  238439328.00ns Passing tests so far. Currently on test number        1900
+
+  250942368.00ns Passing tests so far. Currently on test number        2000
+
+  263445408.00ns Passing tests so far. Currently on test number        2100
+
+  275948448.00ns Passing tests so far. Currently on test number        2200
+
+  288451488.00ns Passing tests so far. Currently on test number        2300
+
+  300954528.00ns Passing tests so far. Currently on test number        2400
+
+  313457568.00ns Passing tests so far. Currently on test number        2500
+
+  325960608.00ns Passing tests so far. Currently on test number        2600
+
+  338463648.00ns Passing tests so far. Currently on test number        2700
+
+  350966688.00ns Passing tests so far. Currently on test number        2800
+
+  363469728.00ns Passing tests so far. Currently on test number        2900
+
+  375972768.00ns Passing tests so far. Currently on test number        3000
+
+  388475808.00ns Passing tests so far. Currently on test number        3100
+
+  400978848.00ns Passing tests so far. Currently on test number        3200
+
+  413481888.00ns Passing tests so far. Currently on test number        3300
+
+  425984928.00ns Passing tests so far. Currently on test number        3400
+
+  438487968.00ns Passing tests so far. Currently on test number        3500
+
+  450991008.00ns Passing tests so far. Currently on test number        3600
+
+  463494048.00ns Passing tests so far. Currently on test number        3700
+
+  475997088.00ns Passing tests so far. Currently on test number        3800
+
+  488500128.00ns Passing tests so far. Currently on test number        3900
+
+  501003168.00ns Passing tests so far. Currently on test number        4000
+
+  513506208.00ns Passing tests so far. Currently on test number        4100
+
+  526009248.00ns Passing tests so far. Currently on test number        4200
+
+  538512288.00ns Passing tests so far. Currently on test number        4300
+
+  551015328.00ns Passing tests so far. Currently on test number        4400
+
+  563518368.00ns Passing tests so far. Currently on test number        4500
+
+  576021408.00ns Passing tests so far. Currently on test number        4600
+
+  588524448.00ns Passing tests so far. Currently on test number        4700
+
+  601027488.00ns Passing tests so far. Currently on test number        4800
+
+  613530528.00ns Passing tests so far. Currently on test number        4900
+
+  626033568.00ns Passing tests so far. Currently on test number        5000
+
+  638536608.00ns Passing tests so far. Currently on test number        5100
+
+  651039648.00ns Passing tests so far. Currently on test number        5200
+
+  663542688.00ns Passing tests so far. Currently on test number        5300
+
+  676045728.00ns Passing tests so far. Currently on test number        5400
+
+  688548768.00ns Passing tests so far. Currently on test number        5500
+
+  701051808.00ns Passing tests so far. Currently on test number        5600
+
+  713554848.00ns Passing tests so far. Currently on test number        5700
+
+  726057888.00ns Passing tests so far. Currently on test number        5800
+
+  738560928.00ns Passing tests so far. Currently on test number        5900
+
+  751063968.00ns Passing tests so far. Currently on test number        6000
+
+  763567008.00ns Passing tests so far. Currently on test number        6100
+
+  776070048.00ns Passing tests so far. Currently on test number        6200
+
+  788573088.00ns Passing tests so far. Currently on test number        6300
+
+  801076128.00ns Passing tests so far. Currently on test number        6400
+
+  813579168.00ns Passing tests so far. Currently on test number        6500
+
+  826082208.00ns Passing tests so far. Currently on test number        6600
+
+  838585248.00ns Passing tests so far. Currently on test number        6700
+
+  851088288.00ns Passing tests so far. Currently on test number        6800
+
+  863591328.00ns Passing tests so far. Currently on test number        6900
+
+  876094368.00ns Passing tests so far. Currently on test number        7000
+
+  888597408.00ns Passing tests so far. Currently on test number        7100
+
+  901100448.00ns Passing tests so far. Currently on test number        7200
+
+  913603488.00ns Passing tests so far. Currently on test number        7300
+
+  926106528.00ns Passing tests so far. Currently on test number        7400
+
+  938609568.00ns Passing tests so far. Currently on test number        7500
+
+  951112608.00ns Passing tests so far. Currently on test number        7600
+
+  963615648.00ns Passing tests so far. Currently on test number        7700
+
+  976118688.00ns Passing tests so far. Currently on test number        7800
+
+  988621728.00ns Passing tests so far. Currently on test number        7900
+
+ 1001124768.00ns Passing tests so far. Currently on test number        8000
+
+ 1013627808.00ns Passing tests so far. Currently on test number        8100
+
+ 1026130848.00ns Passing tests so far. Currently on test number        8200
+
+ 1038633888.00ns Passing tests so far. Currently on test number        8300
+
+ 1051136928.00ns Passing tests so far. Currently on test number        8400
+
+ 1063639968.00ns Passing tests so far. Currently on test number        8500
+
+ 1076143008.00ns Passing tests so far. Currently on test number        8600
+
+ 1088646048.00ns Passing tests so far. Currently on test number        8700
+
+ 1101149088.00ns Passing tests so far. Currently on test number        8800
+
+ 1113652128.00ns Passing tests so far. Currently on test number        8900
+
+ 1126155168.00ns Passing tests so far. Currently on test number        9000
+
+ 1138658208.00ns Passing tests so far. Currently on test number        9100
+
+ 1151161248.00ns Passing tests so far. Currently on test number        9200
+
+ 1163664288.00ns Passing tests so far. Currently on test number        9300
+
+ 1176167328.00ns Passing tests so far. Currently on test number        9400
+
+ 1188670368.00ns Passing tests so far. Currently on test number        9500
+
+ 1201173408.00ns Passing tests so far. Currently on test number        9600
+
+ 1213676448.00ns Passing tests so far. Currently on test number        9700
+
+ 1226179488.00ns Passing tests so far. Currently on test number        9800
+
+ 1238682528.00ns Passing tests so far. Currently on test number        9900
+
+ 1251185568.00ns Passing tests so far. Currently on test number       10000
+
+ 1263688608.00ns Passing tests so far. Currently on test number       10100
+
+ 1276191648.00ns Passing tests so far. Currently on test number       10200
+
+ 1288694688.00ns Passing tests so far. Currently on test number       10300
+
+ 1301197728.00ns Passing tests so far. Currently on test number       10400
+
+ 1313700768.00ns Passing tests so far. Currently on test number       10500
+
+ 1326203808.00ns Passing tests so far. Currently on test number       10600
+
+ 1338706848.00ns Passing tests so far. Currently on test number       10700
+
+ 1351209888.00ns Passing tests so far. Currently on test number       10800
+
+ 1363712928.00ns Passing tests so far. Currently on test number       10900
+
+ 1376215968.00ns Passing tests so far. Currently on test number       11000
+
+ 1388719008.00ns Passing tests so far. Currently on test number       11100
+
+ 1401222048.00ns Passing tests so far. Currently on test number       11200
+
+ 1413725088.00ns Passing tests so far. Currently on test number       11300
+
+ 1426228128.00ns Passing tests so far. Currently on test number       11400
+
+ 1438731168.00ns Passing tests so far. Currently on test number       11500
+
+ 1451234208.00ns Passing tests so far. Currently on test number       11600
+
+ 1463737248.00ns Passing tests so far. Currently on test number       11700
+
+ 1476240288.00ns Passing tests so far. Currently on test number       11800
+
+ 1488743328.00ns Passing tests so far. Currently on test number       11900
+
+ 1501246368.00ns Passing tests so far. Currently on test number       12000
+
+ 1513749408.00ns Passing tests so far. Currently on test number       12100
+
+ 1526252448.00ns Passing tests so far. Currently on test number       12200
+
+ 1538755488.00ns Passing tests so far. Currently on test number       12300
+
+ 1551258528.00ns Passing tests so far. Currently on test number       12400
+
+ 1563761568.00ns Passing tests so far. Currently on test number       12500
+
+ 1576264608.00ns Passing tests so far. Currently on test number       12600
+
+ 1588767648.00ns Passing tests so far. Currently on test number       12700
+
+ 1601270688.00ns Passing tests so far. Currently on test number       12800
+
+ 1613773728.00ns Passing tests so far. Currently on test number       12900
+
+ 1626276768.00ns Passing tests so far. Currently on test number       13000
+
+ 1638779808.00ns Passing tests so far. Currently on test number       13100
+
+ 1651282848.00ns Passing tests so far. Currently on test number       13200
+
+ 1663785888.00ns Passing tests so far. Currently on test number       13300
+
+ 1676288928.00ns Passing tests so far. Currently on test number       13400
+
+ 1688791968.00ns Passing tests so far. Currently on test number       13500
+
+ 1701295008.00ns Passing tests so far. Currently on test number       13600
+
+ 1713798048.00ns Passing tests so far. Currently on test number       13700
+
+ 1726301088.00ns Passing tests so far. Currently on test number       13800
+
+ 1738804128.00ns Passing tests so far. Currently on test number       13900
+
+ 1751307168.00ns Passing tests so far. Currently on test number       14000
+
+ 1763810208.00ns Passing tests so far. Currently on test number       14100
+
+ 1776313248.00ns Passing tests so far. Currently on test number       14200
+
+ 1788816288.00ns Passing tests so far. Currently on test number       14300
+
+ 1801319328.00ns Passing tests so far. Currently on test number       14400
+
+ 1813822368.00ns Passing tests so far. Currently on test number       14500
+
+ 1826325408.00ns Passing tests so far. Currently on test number       14600
+
+ 1838828448.00ns Passing tests so far. Currently on test number       14700
+
+ 1851331488.00ns Passing tests so far. Currently on test number       14800
+
+ 1863834528.00ns Passing tests so far. Currently on test number       14900
+
+ 1876337568.00ns Passing tests so far. Currently on test number       15000
+
+ 1888840608.00ns Passing tests so far. Currently on test number       15100
+
+ 1901343648.00ns Passing tests so far. Currently on test number       15200
+
+ 1913846688.00ns Passing tests so far. Currently on test number       15300
+
+ 1926349728.00ns Passing tests so far. Currently on test number       15400
+
+ 1938852768.00ns Passing tests so far. Currently on test number       15500
+
+ 1951355808.00ns Passing tests so far. Currently on test number       15600
+
+ 1963858848.00ns Passing tests so far. Currently on test number       15700
+
+ 1976361888.00ns Passing tests so far. Currently on test number       15800
+
+ 1988864928.00ns Passing tests so far. Currently on test number       15900
+
+ 2001367968.00ns Passing tests so far. Currently on test number       16000
+
+ 2013871008.00ns Passing tests so far. Currently on test number       16100
+
+ 2026374048.00ns Passing tests so far. Currently on test number       16200
+
+ 2038877088.00ns Passing tests so far. Currently on test number       16300
+
+ 2051380128.00ns Passing tests so far. Currently on test number       16400
+
+ 2063883168.00ns Passing tests so far. Currently on test number       16500
+
+ 2076386208.00ns Passing tests so far. Currently on test number       16600
+
+ 2088889248.00ns Passing tests so far. Currently on test number       16700
+
+ 2101392288.00ns Passing tests so far. Currently on test number       16800
+
+ 2113895328.00ns Passing tests so far. Currently on test number       16900
+
+ 2126398368.00ns Passing tests so far. Currently on test number       17000
+
+ 2138901408.00ns Passing tests so far. Currently on test number       17100
+
+ 2151404448.00ns Passing tests so far. Currently on test number       17200
+
+ 2163907488.00ns Passing tests so far. Currently on test number       17300
+
+ 2176410528.00ns Passing tests so far. Currently on test number       17400
+
+ 2188913568.00ns Passing tests so far. Currently on test number       17500
+
+ 2201416608.00ns Passing tests so far. Currently on test number       17600
+
+ 2213919648.00ns Passing tests so far. Currently on test number       17700
+
+ 2226422688.00ns Passing tests so far. Currently on test number       17800
+
+ 2238925728.00ns Passing tests so far. Currently on test number       17900
+
+ 2251428768.00ns Passing tests so far. Currently on test number       18000
+
+ 2263931808.00ns Passing tests so far. Currently on test number       18100
+
+ 2276434848.00ns Passing tests so far. Currently on test number       18200
+
+ 2288937888.00ns Passing tests so far. Currently on test number       18300
+
+ 2301440928.00ns Passing tests so far. Currently on test number       18400
+
+ 2313943968.00ns Passing tests so far. Currently on test number       18500
+
+ 2326447008.00ns Passing tests so far. Currently on test number       18600
+
+ 2338950048.00ns Passing tests so far. Currently on test number       18700
+
+ 2351453088.00ns Passing tests so far. Currently on test number       18800
+
+ 2363956128.00ns Passing tests so far. Currently on test number       18900
+
+ 2376459168.00ns Passing tests so far. Currently on test number       19000
+
+ 2388962208.00ns Passing tests so far. Currently on test number       19100
+
+ 2401465248.00ns Passing tests so far. Currently on test number       19200
+
+ 2413968288.00ns Passing tests so far. Currently on test number       19300
+
+ 2426471328.00ns Passing tests so far. Currently on test number       19400
+
+ 2438974368.00ns Passing tests so far. Currently on test number       19500
+
+ 2451477408.00ns Passing tests so far. Currently on test number       19600
+
+ 2463980448.00ns Passing tests so far. Currently on test number       19700
+
+ 2476483488.00ns Passing tests so far. Currently on test number       19800
+
+ 2486607043.00ns TESTBENCHFINISHED: simulation complete
+
+Simulation complete via $finish(1) at time 2486607043305 PS + 19
+
+./src/dec_vec_test.v:523 			$finish;
+
+ncsim> exit
+
+TOOL:	ncverilog	14.10-s032: Exiting on Apr 30, 2016 at 03:50:09 EDT  (total: 17:22:13)
+
+
+-----------------------------------------------------------------------------

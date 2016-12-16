@@ -1,0 +1,210 @@
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {test.a2p[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.a2pExpected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.CoPrclk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.ack}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.dq[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.j}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.k}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.req}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.reset}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.se[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.seExpected[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.tr}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.MACdone}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.MACstart}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.a2p[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.ack}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.ack1}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.a1[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.a1Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.a2[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.a2Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.b1[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.b1Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.b2[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.b2Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.b3[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.b3Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.b4[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.b4Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.b5[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.b5Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.b6[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.b6Expected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.delayTrig}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.dq1[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.dq1Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.dq2[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.dq2Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.dq3[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.dq3Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.dq4[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.dq4Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.dq5[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.dq5Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.dq6[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.dq6Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.req}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.req1}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.req2}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.se[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.seExpected[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.CoPrclk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.se_int[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.sez[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.sezExpected[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.sez_int[14:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.sr[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.srExpected[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.sr0[10:6]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.sr0Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.sr1[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.sr1Expected[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.top.sr2[10:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {test.sr2Expected[10:0]}]}
+	} ]]
+
+waveform xview limits 0 2000ps
